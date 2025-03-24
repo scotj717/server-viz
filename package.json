@@ -15,11 +15,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
-    "test": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts test",
-    "eject": "react-scripts eject"
-  },
+  "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+  "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+  "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
+  "eject": "react-scripts eject"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "cross-env": "^7.0.3",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.3.2"
   }
